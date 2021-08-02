@@ -1,5 +1,4 @@
 [functions]
-  build="yarn install"
   node_bundler = "esbuild"
   directory = "functions"
 

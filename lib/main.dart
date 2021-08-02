@@ -9,7 +9,7 @@ void main() {
 }
 
 Future<String> fetchState() async {
-  final response = await Dio().get("localhost:8888/functions/notion");
+  final response = await Dio().get(endpoint());
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
@@ -26,7 +26,7 @@ Future<String> fetchState() async {
 
 String endpoint() {
   if (kDebugMode) return "http://localhost:8888/functions/notion";
-  return "/functions/notion";
+  return "https://flutter-notion-netlify-test.netlify.app/functions/notion";
 }
 
 class MyApp extends StatelessWidget {
