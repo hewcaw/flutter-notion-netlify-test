@@ -33,6 +33,8 @@ jobs:
         with:
           publish-dir: './build/web'
           production-branch: main
+          functions-dir: './functions'
+          netlify-config-path: ./netlify.toml
           github-token: ${{ secrets.MY_GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: false
