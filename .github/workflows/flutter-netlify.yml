@@ -27,8 +27,8 @@ jobs:
       # - run: flutter test
       - run: flutter build web
 
-      - run: yarn install
       - name: Deploy to Netlify  
+        run: yarn install
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: './build/web'

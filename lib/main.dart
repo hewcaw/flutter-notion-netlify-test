@@ -9,7 +9,7 @@ void main() {
 }
 
 Future<String> fetchState() async {
-  final response = await Dio().get(endpoint());
+  final response = await Dio().get("localhost:8888/functions/notion");
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
