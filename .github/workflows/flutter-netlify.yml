@@ -23,11 +23,11 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '2.2.3'
-      - run: yarn install
       - run: flutter pub get
-      - run: flutter test
+      # - run: flutter test
       - run: flutter build web
 
+      - run: yarn install
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1
         with:
